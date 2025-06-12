@@ -71,6 +71,46 @@
                 locationInfo.innerHTML = "El navegador no soporta la geolocalización.";
             }
         });
+
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const captureButton = document.getElementById('capture');
+        const snapshot = document.getElementById('snapshot');
+        const downloadLink = document.getElementById('downloadLink');
+
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                video.srcObject = stream;
+            })
+            .catch(err => {
+                alert("No se pudo acceder a la cámara.");
+            });
+
+        captureButton.addEventListener('click', () => {
+            const context = canvas.getContext('2d');
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            const imageDataUrl = canvas.toDataURL('image/png');
+            snapshot.src = imageDataUrl;
+            downloadLink.href = imageDataUrl;
+            downloadLink.style.display = 'inline-block';
+        });
         </script>
     </body>
+
+    <div class="container">
+        <h2>Captura desde cámara</h2>
+    
+        <div id="camera-container">
+            <video id="video" width="640" height="480" autoplay></video>
+            <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+        </div>
+    
+        <button id="capture">Tomar Foto</button>
+        <a id="downloadLink" style="display: none;" download="captura.png">Descargar Imagen</a>
+    
+        <div id="snapshot-container" style="margin-top: 20px;">
+            <h3>Captura:</h3>
+            <img id="snapshot" src="" alt="Imagen capturada" />
+        </div>
+    </div>
 </html>
