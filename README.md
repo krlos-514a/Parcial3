@@ -1,3 +1,14 @@
+Funcionalidades
+Esta aplicación implementa dos funcionalidades principales que demuestran el uso de APIs y Web Workers en el navegador.
+
+📡 1. Uso de APIs Web
+Funcionalidad que obtiene la ubicación actual del usuario, funcionalidad que permite que el usuario dibuje sobre un canvas y funcionalidad que accede y muestra la cámara del usuario.  
+
+🧵 2. Procesamiento asíncrono con Web Worker
+La segunda funcionalidad activa un Web Worker, que ejecuta tareas de cálculo o procesamiento de datos en segundo plano sin bloquear la interfaz del usuario. Esto permite mantener una experiencia fluida, especialmente útil para operaciones pesadas como generación de listas o simulaciones.
+
+Puede encontrar estas opciones en el menú sidebar luego de ingresar con los usuario admin y usuario.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
