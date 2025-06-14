@@ -13,19 +13,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha200-zGFVdEC8D7X3B2Fw6zL8J2d+qL2l0aC0o/f1uT1p8w==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha200-gqN2S/jH2d+qL2l0aC0o/f1uT1p8w==" crossorigin=""></script>
     
-    
-    <ul class="nav flex-column">
-        <li class="nav-item">
-            <a class="nav-link active" href="{{ route('login') }}">
-                Home
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('apis.index') }}">
-                APIs
-            </a>
-        </li>
-    </ul>
 </head>
 
 <body>

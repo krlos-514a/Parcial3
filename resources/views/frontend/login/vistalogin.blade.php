@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<header>
-    <ul class="nav flex-column">
-        <li class="nav-item">
-            <a class="nav-link active" href="{{ route('login') }}">
-                Home
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('apis.index') }}">
-                APIs
-            </a>
-        </li>
-    </ul>
-</header>
-
 <head>
     <title>Panel</title>
     <meta charset="UTF-8">
