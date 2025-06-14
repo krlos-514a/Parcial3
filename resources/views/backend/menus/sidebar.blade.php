@@ -41,8 +41,19 @@
                  </li>
                 @endcan
 
+                 <li class="nav-item">
+                    <a href="{{ route('apis.index') }}" target="frameprincipal" class="nav-link">
+                        <i class="fas fa-cog"> </i>
+                        <p style="margin-left: 5px">APIS</p>
+                    </a>
+                </li>
 
-
+                <li class="nav-item">
+                    <a href="{{ route('worker') }}" target="frameprincipal" class="nav-link">
+                        <i class="fas fa-list-ol"> </i>
+                        <p style="margin-left: 5px">Web Worker</p>
+                    </a>
+                </li>
 
             </ul>
         </nav>

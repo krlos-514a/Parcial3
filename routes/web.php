@@ -11,7 +11,7 @@ use App\Http\Controllers\Backend\Registro\RegistroController;
 use App\Http\Controllers\Frontend\apis\ApisController;
 
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
-
+use App\Http\Controllers\WorkerController;
 
 // --- LOGIN ---
 
@@ -57,3 +57,7 @@ Route::get('sin-permisos', [ControlController::class,'indexSinPermiso'])->name('
 Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->name('admin.dashboard.index');
 
 Route::get('/apis', [ApisController::class, 'index'])->name('apis.index');
+
+Route::get('/worker', function () {
+    return view('worker');
+})->name('worker');;
